@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#cccccc"
+    android:layout_height="match_parent"
+    tools:context=".fragments.DriverFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/labeDriver"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Driver Mode" />
+
+    <View
+        android:layout_width="244dp"
+        android:layout_height="2dp"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@id/labeDriver"
+        android:background="#858585"/> <!-- garis -->
+
+    <Spinner
+        android:id="@+id/spinId"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_width="244dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/labeDriver"
+        android:background="@drawable/rounded_spinner_background"
+        android:padding="15dp"
+        android:textStyle="bold"
+        android:textSize="16dp"/>
+
+    <Button
+        android:id="@+id/myButton"
+        android:layout_width="244dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spinId"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/rounded_corner_gray"
+        android:text="Set Mode"
+        android:textColor="#ffffff"
+        android:textStyle="bold" />
+
+</RelativeLayout>
