@@ -4,10 +4,27 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Button android:id="@+id/showToggle"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_width="70dp"
+            android:layout_height="20dp"
+            android:background="@drawable/button"
+            android:text="Show"
+            android:textSize="12sp"
+            android:textColor="#ffffff" />
+
     <GridLayout
         android:id="@+id/outerGrid"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
         android:columnCount="2"
         android:rowCount="2">
         <!--Right-->
@@ -18,7 +35,7 @@
             android:layout_rowWeight="1"
             android:layout_columnSpan="1"
             android:layout_rowSpan="1"
-            android:columnCount="2"
+            android:columnCount="3"
             android:rowCount="11"
             android:layout_marginRight="3dp">
 
@@ -44,7 +61,7 @@
                 android:layout_row="2"
                 android:layout_columnSpan="1"
                 android:layout_rowSpan="1"
-                android:text="Right Motor"
+                android:text="Motor Voltage"
                 android:textSize="14dp" />
             <TextView
                 android:id="@+id/r_voltage_value"
@@ -190,6 +207,90 @@
                 android:layout_rowSpan="1"
                 android:text=": (values)"
                 android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/r_id_voltage"
+                android:layout_row="2"
+                android:layout_column="2"
+                android:layout_columnSpan="1"
+                android:layout_rowSpan="1"
+                android:layout_marginLeft="10dp"
+                android:text="id[00]"
+                android:textSize="14sp" />
+            <TextView
+                android:id="@+id/r_id_current"
+                android:layout_row="3"
+                android:layout_column="2"
+                android:layout_columnSpan="1"
+                android:layout_rowSpan="1"
+                android:layout_marginLeft="10dp"
+                android:text="id[00]"
+                android:textSize="14sp" />
+            <TextView
+                android:id="@+id/r_id_faultCode"
+                android:layout_row="4"
+                android:layout_column="2"
+                android:layout_columnSpan="1"
+                android:layout_rowSpan="1"
+                android:layout_marginLeft="10dp"
+                android:text="id[00]"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/r_id_rpm"
+                android:layout_row="5"
+                android:layout_column="2"
+                android:layout_columnSpan="1"
+                android:layout_rowSpan="1"
+                android:layout_marginLeft="10dp"
+                android:text="id[00]"
+                android:textSize="14sp" />
+            <TextView
+                android:id="@+id/r_id_cTemp"
+                android:layout_row="6"
+                android:layout_column="2"
+                android:layout_columnSpan="1"
+                android:layout_rowSpan="1"
+                android:layout_marginLeft="10dp"
+                android:text="id[00]"
+                android:textSize="14sp" />
+            <TextView
+                android:id="@+id/r_id_eTemp"
+                android:layout_row="7"
+                android:layout_column="2"
+                android:layout_columnSpan="1"
+                android:layout_rowSpan="1"
+                android:layout_marginLeft="10dp"
+                android:text="id[00]"
+                android:textSize="14sp" />
+            <TextView
+                android:id="@+id/r_id_tCoef"
+                android:layout_row="8"
+                android:layout_column="2"
+                android:layout_columnSpan="1"
+                android:layout_rowSpan="1"
+                android:layout_marginLeft="10dp"
+                android:text="id[00]"
+                android:textSize="14sp" />
+            <TextView
+                android:id="@+id/r_id_gearStatus"
+                android:layout_row="9"
+                android:layout_column="2"
+                android:layout_columnSpan="1"
+                android:layout_rowSpan="1"
+                android:layout_marginLeft="10dp"
+                android:text="id[00]"
+                android:textSize="14sp" />
+            <TextView
+                android:id="@+id/r_id_controllerStatus"
+                android:layout_row="10"
+                android:layout_column="2"
+                android:layout_columnSpan="1"
+                android:layout_rowSpan="1"
+                android:layout_marginLeft="10dp"
+                android:text="id[00]"
+                android:textSize="14sp" />
+
         </GridLayout>
 
         <!--left-->
@@ -200,7 +301,7 @@
             android:layout_rowWeight="1"
             android:layout_columnSpan="1"
             android:layout_rowSpan="1"
-            android:columnCount="2"
+            android:columnCount="3"
             android:rowCount="11">
 
             <TextView
@@ -372,6 +473,89 @@
                 android:layout_columnSpan="1"
                 android:layout_rowSpan="1"
                 android:text=": (values)"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/l_id_voltage"
+                android:layout_row="2"
+                android:layout_column="2"
+                android:layout_columnSpan="1"
+                android:layout_rowSpan="1"
+                android:layout_marginLeft="10dp"
+                android:text="id[00]"
+                android:textSize="14sp" />
+            <TextView
+                android:id="@+id/l_id_current"
+                android:layout_row="3"
+                android:layout_column="2"
+                android:layout_columnSpan="1"
+                android:layout_rowSpan="1"
+                android:layout_marginLeft="10dp"
+                android:text="id[00]"
+                android:textSize="14sp" />
+            <TextView
+                android:id="@+id/l_id_faultCode"
+                android:layout_row="4"
+                android:layout_column="2"
+                android:layout_columnSpan="1"
+                android:layout_rowSpan="1"
+                android:layout_marginLeft="10dp"
+                android:text="id[00]"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/l_id_rpm"
+                android:layout_row="5"
+                android:layout_column="2"
+                android:layout_columnSpan="1"
+                android:layout_rowSpan="1"
+                android:layout_marginLeft="10dp"
+                android:text="id[00]"
+                android:textSize="14sp" />
+            <TextView
+                android:id="@+id/l_id_cTemp"
+                android:layout_row="6"
+                android:layout_column="2"
+                android:layout_columnSpan="1"
+                android:layout_rowSpan="1"
+                android:layout_marginLeft="10dp"
+                android:text="id[00]"
+                android:textSize="14sp" />
+            <TextView
+                android:id="@+id/l_id_eTemp"
+                android:layout_row="7"
+                android:layout_column="2"
+                android:layout_columnSpan="1"
+                android:layout_rowSpan="1"
+                android:layout_marginLeft="10dp"
+                android:text="id[00]"
+                android:textSize="14sp" />
+            <TextView
+                android:id="@+id/l_id_tCoef"
+                android:layout_row="8"
+                android:layout_column="2"
+                android:layout_columnSpan="1"
+                android:layout_rowSpan="1"
+                android:layout_marginLeft="10dp"
+                android:text="id[00]"
+                android:textSize="14sp" />
+            <TextView
+                android:id="@+id/l_id_gearStatus"
+                android:layout_row="9"
+                android:layout_column="2"
+                android:layout_columnSpan="1"
+                android:layout_rowSpan="1"
+                android:layout_marginLeft="10dp"
+                android:text="id[00]"
+                android:textSize="14sp" />
+            <TextView
+                android:id="@+id/l_id_controllerStatus"
+                android:layout_row="10"
+                android:layout_column="2"
+                android:layout_columnSpan="1"
+                android:layout_rowSpan="1"
+                android:layout_marginLeft="10dp"
+                android:text="id[00]"
                 android:textSize="14sp" />
         </GridLayout>
 
@@ -595,5 +779,6 @@
                 android:textColor="#ffffff" />
         </GridLayout>
 
-</GridLayout>
+     </GridLayout>
+    </LinearLayout>
 </ScrollView>

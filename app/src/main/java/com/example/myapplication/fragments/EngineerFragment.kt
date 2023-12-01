@@ -5,6 +5,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
+import android.widget.GridLayout
+import android.widget.Button
+import android.widget.LinearLayout
+import android.widget.TextView
 import com.example.myapplication.R
 
 // TODO: Rename parameter arguments, choose names that match
@@ -22,20 +27,76 @@ class EngineerFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
+    private lateinit var gridLayout: GridLayout
+    private lateinit var toggleButton: Button
+    private val thirdColumnViewIds = listOf(
+        R.id.r_id_voltage,
+        R.id.r_id_rpm,
+        R.id.r_id_current,
+        R.id.r_id_faultCode,
+        R.id.r_id_cTemp,
+        R.id.r_id_eTemp,
+        R.id.r_id_tCoef,
+        R.id.r_id_gearStatus,
+        R.id.r_id_controllerStatus,
+        R.id.l_id_voltage,
+        R.id.l_id_rpm,
+        R.id.l_id_current,
+        R.id.l_id_faultCode,
+        R.id.l_id_cTemp,
+        R.id.l_id_eTemp,
+        R.id.l_id_tCoef,
+        R.id.l_id_gearStatus,
+        R.id.l_id_controllerStatus
+    )
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
         }
+
+    }
+
+
+
+    private fun toggleVisibility(){
+        val newVisibility = if (thirdColumnVisible()) View.GONE else View.VISIBLE
+
+        for (viewId in thirdColumnViewIds) {
+            val childView = view?.findViewById<View>(viewId)
+            childView?.visibility = newVisibility
+        }
+
+        // Update button text based on the new visibility state
+        val buttonText = if (newVisibility == View.VISIBLE) "Hide" else "Show"
+        toggleButton.text = buttonText
+    }
+    private fun thirdColumnVisible(): Boolean {
+        // Check the visibility of the first view in the third column
+        return view?.findViewById<View>(thirdColumnViewIds.first())?.visibility == View.VISIBLE
     }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        val view = inflater.inflate(R.layout.fragment_engineer, container, false)
+        gridLayout = view.findViewById(R.id.gRight)
+        toggleButton = view.findViewById(R.id.showToggle)
+
+        for (viewId in thirdColumnViewIds) {
+            val childView = view.findViewById<View>(viewId)
+            childView?.visibility = View.GONE
+        }
+        // Set click listener for the toggle button
+        toggleButton.setOnClickListener {
+            // Toggle visibility of the text group
+            toggleVisibility()
+        }
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_engineer, container, false)
+        return view
     }
 
     companion object {
